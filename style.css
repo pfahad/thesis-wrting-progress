@@ -10,6 +10,9 @@
   --card: #ffffff;
   --border: #dce5e9;
   --accent: #315c70;
+  --positive: #16834a;
+  --negative: #c0392b;
+  --neutral: #647580;
 }
 
 body {
@@ -19,6 +22,8 @@ body {
   font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
   line-height: 1.6;
 }
+
+/* Header */
 
 header {
   padding: 4rem max(1.25rem, calc((100% - 1080px) / 2));
@@ -48,6 +53,8 @@ header p {
   font-size: 0.9rem;
 }
 
+/* Main layout */
+
 main {
   width: min(1080px, calc(100% - 2rem));
   margin: 3rem auto;
@@ -58,13 +65,70 @@ section {
 }
 
 h2 {
+  margin-top: 0;
   margin-bottom: 0.25rem;
+  font-size: 1.6rem;
+  line-height: 1.3;
 }
 
 .description {
   margin-top: 0;
   color: var(--muted);
 }
+
+/* Summary cards */
+
+.summary-section {
+  margin-bottom: 3.5rem;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.summary-card {
+  min-width: 0;
+  padding: 1.4rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgb(36 50 61 / 4%);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.summary-card:hover {
+  box-shadow: 0 5px 16px rgb(36 50 61 / 8%);
+  transform: translateY(-2px);
+}
+
+.summary-label {
+  margin: 0 0 0.5rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.summary-total {
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 750;
+  line-height: 1.2;
+  letter-spacing: -0.035em;
+  overflow-wrap: anywhere;
+  font-variant-numeric: tabular-nums;
+}
+
+.summary-change {
+  margin: 0.75rem 0 0;
+  font-size: 0.9rem;
+  font-weight: 650;
+}
+
+/* Plot cards */
 
 .charts {
   display: grid;
@@ -96,11 +160,22 @@ figure img {
   width: 100%;
 }
 
+/* Footer */
+
 footer {
   padding: 1.5rem;
   color: var(--muted);
   text-align: center;
   font-size: 0.85rem;
+  border-top: 1px solid var(--border);
+}
+
+/* Responsive layout */
+
+@media (min-width: 800px) {
+  .summary-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 700px) {
@@ -112,4 +187,19 @@ footer {
   .charts {
     grid-template-columns: 1fr;
   }
+
+  .summary-card {
+    padding: 1rem;
+  }
+
+  .summary-total {
+    font-size: 1.8rem;
+  }
 }
+
+@media (max-width: 380px) {
+  .summary-grid {
+    grid-template-columns: 1fr;
+  }
+}
+

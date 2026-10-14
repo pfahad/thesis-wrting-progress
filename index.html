@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -15,41 +16,145 @@
   </header>
 
   <main>
-    <section>
-      <h2>Weekly overview</h2>
+    <!-- Summary cards -->
+    <section class="summary-section">
+      <h2>Thesis at a glance</h2>
       <p class="description">
-        A comparison of changes between recorded weeks.
+        Current totals and changes recorded during the latest week.
+      </p>
+
+      <div class="summary-grid">
+        <!-- SUMMARY_CARDS_START -->
+
+        <article class="summary-card">
+          <p class="summary-label">Total words</p>
+          <p class="summary-total">2,770</p>
+          <p class="summary-change"
+             style="color: #16A34A;">
+            +1,117 this week
+          </p>
+        </article>
+        
+
+        <article class="summary-card">
+          <p class="summary-label">Total figures</p>
+          <p class="summary-total">5</p>
+          <p class="summary-change"
+             style="color: #16A34A;">
+            +1 this week
+          </p>
+        </article>
+        
+
+        <article class="summary-card">
+          <p class="summary-label">Total equations</p>
+          <p class="summary-total">2</p>
+          <p class="summary-change"
+             style="color: #64748B;">
+            No change this week
+          </p>
+        </article>
+        
+
+        <article class="summary-card">
+          <p class="summary-label">Total tables</p>
+          <p class="summary-total">0</p>
+          <p class="summary-change"
+             style="color: #64748B;">
+            No change this week
+          </p>
+        </article>
+        
+<!-- SUMMARY_CARDS_END -->
+      </div>
+    </section>
+
+    <!-- Weekly progress for smaller metrics -->
+    <section>
+      <h2>Weekly progress</h2>
+      <p class="description">
+        Changes in equations, figures, tables, citations, and
+        cross-references between recorded weeks.
       </p>
       <figure class="wide">
-        <img src="images/weekly-overview.png"
-             alt="Weekly overview of thesis progress">
+        <img src="images/weekly-elements.png"
+             alt="Weekly changes in thesis elements">
       </figure>
     </section>
 
+    <!-- Individual progress charts -->
     <section>
       <h2>Progress by metric</h2>
       <p class="description">
         Each chart shows a separate measure of writing progress.
       </p>
+
       <div class="charts">
-        <figure><figcaption>Word count</figcaption><img src="images/words.png" alt="Word count over time"></figure>
-        <figure><figcaption>Lines</figcaption><img src="images/lines.png" alt="Lines over time"></figure>
-        <figure><figcaption>Equations</figcaption><img src="images/equations.png" alt="Equations over time"></figure>
-        <figure><figcaption>Figures</figcaption><img src="images/figures.png" alt="Figures over time"></figure>
-        <figure><figcaption>Tables</figcaption><img src="images/tables.png" alt="Tables over time"></figure>
-        <figure><figcaption>Itemize lists</figcaption><img src="images/itemize.png" alt="Itemize lists over time"></figure>
-        <figure><figcaption>Enumerated lists</figcaption><img src="images/enumerate.png" alt="Enumerated lists over time"></figure>
-        <figure><figcaption>Footnotes</figcaption><img src="images/footnotes.png" alt="Footnotes over time"></figure>
-        <figure><figcaption>Citations</figcaption><img src="images/citations.png" alt="Citations over time"></figure>
-	<figure><figcaption>Cross-references</figcaption><img src="images/cross_references.png"alt="Cross-references over time"></figure>
-        <figure><figcaption>Sections</figcaption><img src="images/sections.png" alt="Sections over time"></figure>
+        <figure>
+          <figcaption>Word count</figcaption>
+          <img src="images/words.png" alt="Word count over time">
+        </figure>
+
+        <figure>
+          <figcaption>Lines</figcaption>
+          <img src="images/lines.png" alt="Lines over time">
+        </figure>
+
+        <figure>
+          <figcaption>Equations</figcaption>
+          <img src="images/equations.png" alt="Equations over time">
+        </figure>
+
+        <figure>
+          <figcaption>Figures</figcaption>
+          <img src="images/figures.png" alt="Figures over time">
+        </figure>
+
+        <figure>
+          <figcaption>Tables</figcaption>
+          <img src="images/tables.png" alt="Tables over time">
+        </figure>
+
+        <figure>
+          <figcaption>Itemize lists</figcaption>
+          <img src="images/itemize.png" alt="Itemize lists over time">
+        </figure>
+
+        <figure>
+          <figcaption>Enumerated lists</figcaption>
+          <img src="images/enumerate.png" alt="Enumerated lists over time">
+        </figure>
+
+        <figure>
+          <figcaption>Footnotes</figcaption>
+          <img src="images/footnotes.png" alt="Footnotes over time">
+        </figure>
+
+        <figure>
+          <figcaption>Citations</figcaption>
+          <img src="images/citations.png" alt="Citations over time">
+        </figure>
+
+        <figure>
+          <figcaption>Cross-references</figcaption>
+          <img src="images/cross_references.png"
+               alt="Cross-references over time">
+        </figure>
+
+        <figure>
+          <figcaption>Sections</figcaption>
+          <img src="images/sections.png" alt="Sections over time">
+        </figure>
       </div>
     </section>
   </main>
 
   <footer>
-    <p>Updated manually. Counts are indicators of writing activity,
-    not a measure of thesis quality.</p>
+    <p>
+      Updated manually. Counts are indicators of writing activity,
+      not a measure of thesis quality.
+    </p>
   </footer>
 </body>
 </html>
+
